@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <!-- Compiled and minified CSS -->
+    <!-- Materialize CSS file -->
+    <link rel="stylesheet" href="css/materialize.min.css" 
+            media="screen, projection"/>
+    
+    <!-- Materialize JS file -->
+    <script defer type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script defer type="text/javascript" src="js/index.js"></script>
+
+    <script defer type="text/javascript" src="js/task.js"></script>
+
+    <script type="module" src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+
+    <script>
+      
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBw1-M9e2Fy8xRizH0XxQ_XxRFX_Aphmp0",
+        authDomain: "prototipo-uya-ido.firebaseapp.com",
+        databaseURL: "https://prototipo-uya-ido-default-rtdb.firebaseio.com",
+        projectId: "prototipo-uya-ido",
+        storageBucket: "prototipo-uya-ido.appspot.com",
+        messagingSenderId: "1056566832965",
+        appId: "1:1056566832965:web:9e55a0e5cb2ebff0df182c",
+        measurementId: "G-PM470T2H2D"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.firestore();
+    </script>
+  </head>
+  <body>
+    
+    <nav>
+      <div class="nav-wrapper teal lighten-2">
+        <a href="./index.html" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+          <li><a href="tasks.html">Tareas</a></li>
+          <li><a href="about.html">Quienes somos</a></li>
+          <li><a href="">Ayuda</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="index.html" class="breadcrumb">Home > </a>
+          <a href="tasks.html">Tareas</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div id="test">
+    
+    </div>
+
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="Alvin" id="name" type="text" class="validate">
+        <label class="active" for="name">First Name</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="Alvin" id="description" type="text" class="validate">
+        <label class="active" for="description">First Name</label>
+      </div>
+    </div>
+
+    <a class="waves-effect waves-light btn" id="myButton">button</a>
+
+  </body>
+</html>
