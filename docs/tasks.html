@@ -41,21 +41,32 @@
   </head>
   <body>
     <!--Button fixed-->
-    <div class="fixed-action-btn click-to-toggle direction-top direction-up active">
+    <div class="fixed-action-btn click-to-toggle">
       <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large teal darken-2 ">
         <i class="large material-icons">menu</i>
       </button>
       <ul>
         <li>
-          <button tabindex="0" class="btn-floating teal tooltipped modal-trigger" data-position="left" data-tooltip="Añadir tarea" aria-label="Añadir" role="button" data-target="modal1"><i class="material-icons">add</i>
+          <button tabindex="0" class="btn-floating teal tooltipped modal-trigger" 
+              data-position="left" 
+              data-tooltip="Registrarse"
+              aria-label="registro"
+              role="button"
+              data-target="modal1"><i class="material-icons">add</i>
           </button>
         </li>
         <li>
-          <button tabindex="0" class="btn-floating black tooltipped" data-position="left" data-tooltip="Eliminar tarea" aria-label="Eliminar tarea" role="button"><i class="material-icons">clear</i>
+          <button tabindex="0" class="btn-floating black tooltipped" 
+              data-position="left" 
+              data-tooltip="Cerrar sesión"
+              aria-label="cierre de sesión"  
+              role="button"
+              id="logout"><i class="material-icons">clear</i>
           </button>
         </li>
       </ul>
     </div>
+    
     
     <nav>
       <div class="nav-wrapper teal lighten-2">
