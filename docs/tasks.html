@@ -1,29 +1,26 @@
 <html>
   <head>
-          <!-- Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-  rel="stylesheet">
-    <!-- Compiled and minified CSS -->
+    <!--Responsive web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--CSS-->
+    <link href="css/index.css" rel="stylesheet">
     <!-- Materialize CSS file -->
-    <link rel="stylesheet" href="css/materialize.min.css" 
-            media="screen, projection"/>
-    
+    <link rel="stylesheet" href="css/materialize.min.css" media="screen, projection"/>
     <!-- Materialize JS file -->
     <script defer type="text/javascript" src="js/materialize.min.js"></script>
-
+    <!--Index.js-->
     <script defer type="text/javascript" src="js/index.js"></script>
-
+    <!--Task.js-->
     <script defer type="text/javascript" src="js/task.js"></script>
-
+    <!--JQuery-->
     <script type="module" src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-    <script>
-      
-    </script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <!--Firestore BBDD-->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
-
+    <!--Firebase-->
     <script>
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -43,6 +40,22 @@
     </script>
   </head>
   <body>
+    <!--Button fixed-->
+    <div class="fixed-action-btn click-to-toggle direction-top direction-up active">
+      <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large teal darken-2 ">
+        <i class="large material-icons">menu</i>
+      </button>
+      <ul>
+        <li>
+          <button tabindex="0" class="btn-floating teal tooltipped modal-trigger" data-position="left" data-tooltip="Añadir tarea" aria-label="Añadir" role="button" data-target="modal1"><i class="material-icons">add</i>
+          </button>
+        </li>
+        <li>
+          <button tabindex="0" class="btn-floating black tooltipped" data-position="left" data-tooltip="Eliminar tarea" aria-label="Eliminar tarea" role="button"><i class="material-icons">clear</i>
+          </button>
+        </li>
+      </ul>
+    </div>
     
     <nav>
       <div class="nav-wrapper teal lighten-2">
@@ -64,15 +77,41 @@
         </div>
       </div>
     </nav>
-  
+    
     <div class="container light center">
+      <div class="section">
+        <h5>Tareas a realizar</h5>
+      </div>
       <ul class="collapsible" id="tasksView">
-        <div class="progress">
-          <div class="indeterminate"></div>
+        <div class="preloader-wrapper small active">
+          <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
         </div>
       </ul>
       
     </div>
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+
 
     <div class="row">
       <div class="input-field col s6">
