@@ -1,35 +1,39 @@
-
-document.addEventListener("DOMContentLoaded", (event) => {
-
-  const list = document.querySelector("#name");
-  console.log(list.value)
-
-  
-});
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  const test = document.querySelector("#test");
-  test.innerHTML = "";
-  database.collection("tareas").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      test.innerHTML += `${doc.data().nombre} <br>`;
-    })
-  })
-});
-
 const boton = document.querySelector("#myButton");
 
-boton.addEventListener("click", () => {
+function reloadTaskView(){
+  const taskView = document.querySelector("#tasksView")
+  taskView.innerHTML = "";
+  database.collection("tareas").get().then((querySnapshot) => {
+    let content = ``;
+    querySnapshot.forEach((doc) => {
+      content += `<li><div class="collapsible-header"><i class="material-icons">filter_drama</i>${doc.data().nombre}</div>`;
+      content += `<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div></li>`;
+    })
+    taskView.innerHTML += content;
+  })
+};
 
-    const name = document.querySelector("#name").value;
-    database.collection
-    database.collection("tareas").add({
-        nombre: name
-    })
-    .then((docRef) => {
-        console.log("Contacto añadido a la BD con ID: ", docRef.id);
-    })
-    .catch( (docRef) => {
-        console.log("Error añadiendo contacto: ",error);
-    })
+
+function submitTasktoFirestore(){
+  const name = document.querySelector("#name").value;
+  database.collection("tareas").add({
+    nombre: name
+  })
+  .then((docRef) => {
+      console.log("Contacto añadido a la BD con ID: ", docRef.id);
+  })
+  .catch( (docRef) => {
+      console.log("Error añadiendo contacto: ",error);
+  })
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  reloadTaskView();
+});
+
+
+
+boton.addEventListener("click", () => {
+  submitTasktoFirestore();
+  reloadTaskView();
 });

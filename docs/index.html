@@ -1,62 +1,61 @@
 <html>
   <head>
-      <!-- Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-  rel="stylesheet">
+    <!--Responsive web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Javascript Code from index.js-->
     <script defer type="text/javascript" src="js/index.js"></script>
-      <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous">
-    </script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   </head>
-  <body>
 
-  <!-- Navegación en la web -->    
+  <body>
+  <!-- Navbar webpage -->    
     <div class="navbar-fixed hoverable ">
       <nav >
         <div class="nav-wrapper teal lighten-1" >
-          
 
             <a href="#" data-target="idoNav"
                         class="sidenav-trigger"
                         aria-expanded="false"
-                        aria-label= "accionar menú lateral">
+                        aria-label= "Accionar menú lateral">
               <i class="material-icons">menu</i>          
             </a>
           
             <ul class="right hide-on-med-and-down" role="navigation" aria-label="Barra superior">
               <li><a href="profile.html">Perfil</a></li>
-              <li><a href="tareas.html">Tareas</a></li>
+              <li><a href="tasks.html">Tareas</a></li>
             </ul>
           
         </div>
       </nav>
     </div>
-        
-  <!-- responsive menu - hidden in desktop -->    
+         
+  <!-- Responsive menu - Hidden in desktop -->    
     <ul 
       class="sidenav" id="idoNav"
       aria-label="Menú de navegación lateral">
-      <li ><a tabindex="-1" href="profile.html" aria-label="ir al perfil">Perfil</a></li>
-      <li ><a tabindex="-1" href="tareas.html" aria-label="ir a mis tareas">Tareas</a></li>
+      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
+      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
       <br>
       <br>
       <br>
-      <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+      <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
     </ul>
 
+    <!--Parallax-->
     <div class="parallax-container">
-      <div class="parallax"><img src="https://materializecss.com/images/parallax1.jpg"></div>
+      <div class="parallax"><img src="img/a.jpg"></div>
     </div>
     <div class="section white">
       <div class="row container">
-        <h2 class="header">Parallax</h2>
-        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        <h2 class="header">I-DO</h2>
+        <p class="grey-text text-darken-3 lighten-3">I-DO es una aplicación web que permite gestionar tu tiempo de estudio aprovechando</p>
       </div>
     </div>
     <div class="parallax-container">
@@ -65,6 +64,7 @@
 
   </body>
 
+<!--Footer-->
   <footer class="page-footer teal lighten-2">
     <div class="container ">
       <div class="row">
@@ -85,7 +85,7 @@
     </div>
     <div class="footer-copyright teal lighten-2">
       <div class="container">
-      © 2014 Copyright Text
+      © 2021 Copyright
       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
