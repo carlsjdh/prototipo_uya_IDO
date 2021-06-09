@@ -22,7 +22,7 @@ const boton = document.querySelector("#myButton");
 boton.addEventListener("click", () => {
 
     const name = document.querySelector("#name").value;
-
+    database.collection
     database.collection("tareas").add({
         nombre: name
     })
