@@ -1,0 +1,38 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<body>
+<!-- Modal Trigger -->
+  <a id="op" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="input-field col s6">
+        <input type="text" id="example" class="validate" required>
+        <label for="example">Example</label
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar sin validar</a>
+      <a href="#!" id="cl"class="modal-action waves-effect waves-green btn-flat ">Validar y Cerrar</a>
+    </div>
+  </div>
+<script>
+$(document).ready(function(){
+    $("#op").click(function(){
+      $('#modal1').openModal();
+    });
+      
+    
+    $( "#cl" ).click(function() {
+       if($("#example").val() === ""){
+         alert("Rellene todos los campos");
+       }else{
+         $('#modal1').closeModal();
+       }
+      
+    });
+  });
+</script>
+</body>

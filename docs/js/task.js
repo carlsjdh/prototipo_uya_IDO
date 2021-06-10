@@ -26,17 +26,17 @@ function reloadTaskView(){
       var Difference_In_Time = date1.getTime() - today;
       // To calculate the no. of days between two dates
       var Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
-      if(Difference_In_Days < 0) {
+      if(Difference_In_Days <= 0) {
         Difference_In_Days = "Finalizado"
       } else {
         Difference_In_Days = "Quedan " + Difference_In_Days + " días"
       }
-      content += `<li tabindex="0"><div class="collapsible-header" tabindex="0"><i class="material-icons" tabindex="0">filter_drama</i>${doc.data().nombre} - ${Difference_In_Days}</div>`;
+      content += `<li tabindex="0"><div class="collapsible-header" tabindex="0"><i class="material-icons" tabindex="0">forum</i>${doc.data().nombre} - ${Difference_In_Days}</div>`;
       content += `<div class="collapsible-body" tabindex="0">  <div class="section">
-      <h5 tabindex="0">Descripción:</h5>
+      <h6 tabindex="0">Descripción:</h6>
       <p>${doc.data().descripcion}</p>
       </div>  <div class="section">
-      <h5>Fecha de finalización</h5>
+      <h6>Fecha de finalización:</h6>
       <p>${doc.data().fecha}</p>
       </div></div></li>`;
     })
@@ -46,6 +46,7 @@ function reloadTaskView(){
 
 
 function submitTasktoFirestore(){
+  
   const name = document.querySelector("#taskName").value;
   const description = document.querySelector("#descriptionTask").value;
   const date = document.querySelector("#dateTask").value;
@@ -58,10 +59,14 @@ function submitTasktoFirestore(){
       fecha: date
     })
     .then((docRef) => {
-        console.log("Contacto añadido a la BD con ID: ", docRef.id);
+      $("#modalAdd").modal('close');
+      M.toast({html: 'Tarea añadida correctamente!'})
+      console.log("Contacto añadido a la BD con ID: ", docRef.id);
+      reloadTaskView();
     })
     .catch( (docRef) => {
-        console.log("Error añadiendo contacto: ",error);
+      M.toast({html: 'Error añadiendo la tarea'})
+        console.log("Error añadiendo contacto: ");
     })
   }
 }
@@ -75,5 +80,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 boton.addEventListener("click", () => {
   submitTasktoFirestore();
-  reloadTaskView();
 });
