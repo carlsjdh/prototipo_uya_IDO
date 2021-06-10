@@ -58,8 +58,8 @@
         <li>
           <button tabindex="0" class="btn-floating black tooltipped" 
               data-position="left" 
-              data-tooltip="Cerrar sesión"
-              aria-label="cierre de sesión"  
+              data-tooltip="Eliminar tarea"
+              aria-label="Eliminar tarea"  
               role="button"
               id="logout"><i class="material-icons">clear</i>
           </button>
@@ -68,46 +68,46 @@
     </div>
     
     
-<!-- Navbar webpage -->    
-<div class="navbar-fixed hoverable ">
-  <nav >
-    <div class="nav-wrapper teal lighten-1" >
+    <!-- Navbar webpage -->    
+    <div class="navbar-fixed hoverable ">
+      <nav >
+        <div class="nav-wrapper teal lighten-1" >
 
-        <a href="#" data-target="idoNav"
-                    class="sidenav-trigger"
-                    aria-expanded="false"
-                    aria-label= "Accionar menú lateral">
-          <i class="material-icons">menu</i>          
-        </a>
-      
-        <ul class="right hide-on-med-and-down" role="navigation" aria-label="Barra superior">
-          <li><a href="profile.html">Perfil</a></li>
-          <li><a href="tasks.html">Tareas</a></li>
-        </ul>
-      
+            <a href="#" data-target="idoNav"
+                        class="sidenav-trigger"
+                        aria-expanded="false"
+                        aria-label= "Accionar menú lateral">
+              <i class="material-icons">menu</i>          
+            </a>
+          
+            <ul class="right hide-on-med-and-down" role="navigation" aria-label="Barra superior">
+              <li><a href="profile.html">Perfil</a></li>
+              <li><a href="tasks.html">Tareas</a></li>
+            </ul>
+          
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
      
-<!-- Responsive menu - Hidden in desktop -->    
-<ul 
-  class="sidenav" id="idoNav"
-  aria-label="Menú de navegación lateral">
-  <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
-  <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
-  <br>
-  <br>
-  <br>
-  <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
-</ul>
+    <!-- Responsive menu - Hidden in desktop -->    
+    <ul 
+      class="sidenav" id="idoNav"
+      aria-label="Menú de navegación lateral">
+      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
+      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
+      <br>
+      <br>
+      <br>
+      <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+    </ul>
 
 
-
-    <nav>
-      <div class="nav-wrapper teal lighten-1">
-        <div class="col s12">
-          <a href="index.html" class="breadcrumb">Home > </a>
-          <a href="tasks.html">Tareas</a>
+    <!--Breadscrumbs-->
+    <nav aria-label="breadcrumbs">
+      <div class="nav-wrapper teal darken-2">
+        <div class="col s12 container">
+          <a href="index.html" class="breadcrumb">Home</a>
+          <a href="tasks.html" class="breadcrumb" aria-current="location">Mis tareas</a>
         </div>
       </div>
     </nav>
@@ -160,11 +160,8 @@
             <label class="active" for="dateTask">Fecha</label>
           </div>
         </div>
-        <a class="waves-effect waves-light btn modal-close center" id="buttonAddtask">Enviar</a>
-   
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        <button class="waves-effect waves-light btn" id="buttonAddtask">Enviar</button>
+        <button class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
       </div>
     </div>
 
