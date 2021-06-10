@@ -14,6 +14,5 @@ document.addEventListener('DOMContentLoaded', function() {
     direction: 'up',
     hoverEnabled: false
   });
-  instances.close()
 });
 

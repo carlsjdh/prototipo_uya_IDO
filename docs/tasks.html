@@ -49,10 +49,10 @@
         <li>
           <button tabindex="0" class="btn-floating teal tooltipped modal-trigger" 
               data-position="left" 
-              data-tooltip="Registrarse"
-              aria-label="registro"
+              data-tooltip="Añadir tarea"
+              aria-label="Añadir tarea"
               role="button"
-              data-target="modal1"><i class="material-icons">add</i>
+              data-target="modalAdd"><i class="material-icons">add</i>
           </button>
         </li>
         <li>
@@ -68,16 +68,39 @@
     </div>
     
     
-    <nav>
-      <div class="nav-wrapper teal lighten-2">
-        <a href="./index.html" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+<!-- Navbar webpage -->    
+<div class="navbar-fixed hoverable ">
+  <nav >
+    <div class="nav-wrapper teal lighten-1" >
+
+        <a href="#" data-target="idoNav"
+                    class="sidenav-trigger"
+                    aria-expanded="false"
+                    aria-label= "Accionar menú lateral">
+          <i class="material-icons">menu</i>          
+        </a>
+      
+        <ul class="right hide-on-med-and-down" role="navigation" aria-label="Barra superior">
+          <li><a href="profile.html">Perfil</a></li>
           <li><a href="tasks.html">Tareas</a></li>
-          <li><a href="about.html">Quienes somos</a></li>
-          <li><a href="">Ayuda</a></li>
         </ul>
-      </div>
-    </nav>
+      
+    </div>
+  </nav>
+</div>
+     
+<!-- Responsive menu - Hidden in desktop -->    
+<ul 
+  class="sidenav" id="idoNav"
+  aria-label="Menú de navegación lateral">
+  <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
+  <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
+  <br>
+  <br>
+  <br>
+  <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+</ul>
+
 
 
     <nav>
@@ -109,36 +132,41 @@
       
     </div>
 
-    <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modalAdd" class="modal">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4>Añadir tarea</h4>
+        <p>Información de la tarea</p>
+        <!--Form task-->
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">class</i>
+            <input id="taskName" type="text" class="validate">
+            <label class="active" for="taskName">Nombre de la tarea</label>
+          </div>
+    
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">mode_edit</i>
+              <textarea id="descriptionTask" class="materialize-textarea"></textarea>
+            <label for="descriptionTask">Descripcion</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">time</i>
+            <input id="dateTask" type="date" class="validate">
+            <label class="active" for="dateTask">Fecha</label>
+          </div>
+        </div>
+        <a class="waves-effect waves-light btn modal-close center" id="buttonAddtask">Enviar</a>
+   
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
       </div>
     </div>
-
-
-    <div class="row">
-      <div class="input-field col s6">
-        <input value="Alvin" id="name" type="text" class="validate">
-        <label class="active" for="name">First Name</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s6">
-        <input value="Alvin" id="description" type="text" class="validate">
-        <label class="active" for="description">First Name</label>
-      </div>
-    </div>
-
-    <a class="waves-effect waves-light btn" id="myButton">button</a>
 
   </body>
 </html>
