@@ -28,7 +28,7 @@ function reloadTaskView(){
       console.log(Difference_In_Days)
       content += `<li><div class="collapsible-header"><i class="material-icons">filter_drama</i>${doc.data().nombre} - Quedan ${Difference_In_Days} días</div>`;
       content += `<div class="collapsible-body">  <div class="section">
-      <h5>Descripcion:</h5>
+      <h5>Descripción:</h5>
       <p>${doc.data().descripcion}</p>
     </div>  <div class="section">
     <h5>Fecha de finalización</h5>
