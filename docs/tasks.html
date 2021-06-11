@@ -41,8 +41,16 @@
 
   </head>
   <body>
+
+      <!-- Tap Target Structure -->
+    <div class="tap-target" data-target="bottonOptions">
+      <div class="tap-target-content">
+        <h5>Title</h5>
+        <p>A bunch of text</p>
+      </div>
+    </div>
     <!--Button fixed-->
-    <div class="fixed-action-btn click-to-toggle">
+    <div class="fixed-action-btn click-to-toggle" id="bottonOptions">
       <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large teal darken-2 ">
         <i class="large material-icons">menu</i>
       </button>
@@ -53,21 +61,22 @@
               data-tooltip="Añadir tarea"
               aria-label="Añadir tarea"
               role="button"
-              data-target="modalAdd"><i class="material-icons">add</i>
+              href="#modalAdd"><i class="material-icons"
+              id="buttonAddTask">add</i>
           </button>
         </li>
         <li>
-          <button tabindex="0" class="btn-floating black tooltipped" 
+          <button tabindex="0" class="btn-floating black tooltipped modal-trigger" 
               data-position="left" 
               data-tooltip="Eliminar tarea"
-              aria-label="Eliminar tarea"  
+              aria-label="Eliminar tarea"
               role="button"
-              id="logout"><i class="material-icons">clear</i>
+              href="#modalDelete"><i class="material-icons"
+              id="buttonDeleteTask">clear</i>
           </button>
         </li>
       </ul>
     </div>
-    
     
     <!-- Navbar webpage -->    
     <div class="navbar-fixed hoverable ">
@@ -91,7 +100,7 @@
     </div>
      
     <!-- Responsive menu - Hidden in desktop -->    
-    <ul 
+    <ul
       class="sidenav" id="idoNav"
       aria-label="Menú de navegación lateral">
       <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
@@ -102,7 +111,6 @@
       <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
     </ul>
 
-
     <!--Breadscrumbs-->
     <nav aria-label="breadcrumbs">
       <div class="nav-wrapper teal darken-2">
@@ -112,28 +120,32 @@
         </div>
       </div>
     </nav>
-    
+
+    <!--View Tasks-->
     <div class="container light center">
       <div class="section">
         <h5>Tareas a realizar</h5>
       </div>
       <ul class="collapsible" id="tasksView">
-        <div class="preloader-wrapper small active">
-          <div class="spinner-layer spinner-green-only">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div><div class="gap-patch">
-              <div class="circle"></div>
-            </div><div class="circle-clipper right">
-              <div class="circle"></div>
-            </div>
-          </div>
-        </div>
+
       </ul>
-      
     </div>
 
-    <!-- Modal Structure -->
+
+    <!-- Modal Structure - Delete Task -->
+    <div id="modalDelete" class="modal">
+      <div class="modal-content">
+        <h4>Eliminar tarea</h4>
+        <div class="row" id="viewDeleteTask">
+          <form action="#" id="formDeleteTask">
+          </form>
+        </div>
+        <button class="waves-effect waves-light btn" id="buttonSendDeleteTask">Eliminar</button>
+        <button class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure - Add Task -->
     <div id="modalAdd" class="modal">
       <div class="modal-content">
         <h4>Añadir tarea</h4>
@@ -145,7 +157,8 @@
             <input id="taskName" type="text" class="validate">
             <label class="active" for="taskName">Nombre de la tarea</label>
           </div>
-    
+        </div>
+
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">mode_edit</i>
@@ -161,10 +174,10 @@
             <label class="active" for="dateTask">Fecha</label>
           </div>
         </div>
-        <button class="waves-effect waves-light btn" id="buttonAddtask">Enviar</button>
+        <button class="waves-effect waves-light btn" id="buttonSendtask">Enviar</button>
         <button class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
       </div>
     </div>
 
+
   </body>
-</html>
