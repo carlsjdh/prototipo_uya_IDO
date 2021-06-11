@@ -129,14 +129,16 @@ botonSendDeleteTask.addEventListener("click", () => {
   }
   
   names.forEach((name) => {
+    var Problems = false;
     database.collection("tareas").doc(name).delete().then(() => {
       console.log("Document successfully deleted!");
       $("#modalDelete").modal('close');
-      M.toast({html: 'Eliminado correctamente'})
-      reloadTaskView();
+      M.toast({html: `Eliminado correctamente ${name}`})
     }).catch((error) => {
+        Problems = true;
         console.error("Error removing document: ", error);
     });
+
   })
- 
+  reloadTaskView();
 })
