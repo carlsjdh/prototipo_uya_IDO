@@ -59,14 +59,22 @@ function reloadTaskView(){
         } else {
           Difference_In_Days = "Quedan " + Difference_In_Days + " días"
         }
-        content += `<li tabindex="0"><div class="collapsible-header" tabindex="0"><i class="material-icons" tabindex="0">forum</i>${doc.data().nombre} - ${Difference_In_Days}</div>`;
-        content += `<div class="collapsible-body" tabindex="0">  <div class="section">
-        <h6 tabindex="0">Descripción:</h6>
-        <p>${doc.data().descripcion}</p>
-        </div>  <div class="section">
-        <h6>Fecha de finalización:</h6>
-        <p>${doc.data().fecha}</p>
-        </div></div></li>`;
+
+        var taskName = doc.data().nombre;
+        content += `<li>
+                      <div class="collapsible-header" aria-label="${taskName}">
+                        <i class="material-icons">forum</i>
+                        <span tabindex="0">${taskName} - ${Difference_In_Days}</span>
+                      </div>`;
+        content += `  <div class="collapsible-body">  
+                        <div class="section">
+                          <h6 tabindex="0">Descripción:</h6>
+                          <p tabindex="0">${doc.data().descripcion}</p>
+                        </div>  <div class="section">
+                        <h6 tabindex="0">Fecha de finalización:</h6>
+                        <p tabindex="0">${doc.data().fecha}</p>
+                      </div>
+                    </li>`;
       })
       taskView.innerHTML = content;      
     }
