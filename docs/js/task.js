@@ -64,7 +64,7 @@ function reloadTaskView(){
         content += `<li>
                       <div class="collapsible-header" aria-label="${taskName}">
                         <i class="material-icons">forum</i>
-                        <span tabindex="0">${taskName} - ${Difference_In_Days}</span>
+                        <span id="task_${taskName}" tabindex="0">${taskName} - ${Difference_In_Days}</span>
                       </div>`;
         content += `  <div class="collapsible-body">  
                         <div class="section">
@@ -76,7 +76,7 @@ function reloadTaskView(){
                       </div>
                     </li>`;
       })
-      taskView.innerHTML = content;      
+      taskView.innerHTML = content;  
     }
 
   })
