@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--Responsive web-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Javascript Code from index.js-->
+  <script defer type="text/javascript" src="js/index.js"></script>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <title>Profile</title>
+</head>
+
+<body>
+    <!-- Navbar webpage -->    
+    <div class="navbar-fixed hoverable ">
+      <nav >
+        <div class="nav-wrapper teal lighten-1" >
+
+            <a href="#" data-target="idoNav"
+                        class="sidenav-trigger"
+                        aria-expanded="false"
+                        aria-label= "Accionar menú lateral">
+              <i class="material-icons">menu</i>          
+            </a>
+          
+            <ul class="right hide-on-med-and-down" role="navigation" aria-label="Barra superior">
+              <li><a href="profile.html">Perfil</a></li>
+              <li><a href="tasks.html">Tareas</a></li>
+            </ul>
+          
+        </div>
+      </nav>
+    </div>
+     
+    <!-- Responsive menu - Hidden in desktop -->    
+    <ul 
+      class="sidenav" id="idoNav"
+      aria-label="Menú de navegación lateral">
+      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
+      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
+      <br>
+      <br>
+      <br>
+      <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+    </ul>
+
+
+    <!--Breadscrumbs-->
+    <nav aria-label="breadcrumbs">
+      <div class="nav-wrapper teal darken-2">
+        <div class="col s12 container">
+          <a href="index.html" class="breadcrumb">Home</a>
+          <a href="profile.html" class="breadcrumb" aria-current="location">Perfil</a>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+    <div class="row">
+      <!-- Card img / name -->
+      <div class="col s12">
+        <div class="card grey lighten-5 z-depth-1">
+          <div class=" card-content center-align">
+            <img tabindex="1" alt="Imagen de usuario" src="img/profile-1.jfif" alt="Imagen de usuario"
+              class="circle responsive-img"> <!-- notice the "circle" class -->
+            <h1 tabindex="2" id="profile-name" class="flow-text" aria-label="Nombre de usuario">Hermione Granger</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Card info -->
+      <div class="col s12">
+        <div class="card teal lighten-1">
+          <div class="card-content white-text">
+            <span class="card-title">Contacto</span>
+            <ul>
+              <li><strong>e-mail:</strong> hermione@potter.com</li>
+              <li><strong>Teléfono:</strong> 555-1234</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="card teal lighten-1">
+          <div class="card-content white-text">
+            <span class="card-title">Dirección</span>
+            <ul>
+              <li><strong>Ciudad:</strong> San Cristóbal de La Laguna</li>              
+              <li><strong>Calle:</strong> Juana La Blanca</li>              
+              <li><strong>Nº:</strong> X</li>              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
