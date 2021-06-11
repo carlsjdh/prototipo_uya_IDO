@@ -1,6 +1,7 @@
 const boton = document.querySelector("#buttonSendtask");
 const botonAddTask = document.querySelector("#buttonAddTask");
 const botonDeleteTask = document.querySelector("#buttonDeleteTask");
+const botonSendDeleteTask = document.querySelector("#buttonSendDeleteTask");
 
 const loadingCSS = 
   `<div class="preloader-wrapper small active">
@@ -13,6 +14,28 @@ const loadingCSS =
         <div class="circle"></div>
       </div>
     </div>`
+
+
+
+function reloadDeleteTaskView(){
+  const formDeleteTask = document.querySelector("#formDeleteTask")
+  formDeleteTask.innerHTML = loadingCSS;
+  database.collection("tareas").get().then((querySnapshot) => {
+    if (querySnapshot.empty) {
+      formDeleteTask.innerHTML = "No hay tareas";
+    } else {
+      var content = '';
+      querySnapshot.forEach((doc) => {
+        content += `<p><label><input type="checkbox" value="${doc.data().nombre}"/><span>${doc.data().nombre}</span></label></p>`;
+      })
+      content += `</form>`
+      formDeleteTask.innerHTML = content;      
+    }
+
+  })
+};
+
+
 
 function reloadTaskView(){
   const today = Date.now()
@@ -52,6 +75,7 @@ function reloadTaskView(){
 };
 
 
+
 function submitTasktoFirestore(){
   
   const name = document.querySelector("#taskName").value;
@@ -80,12 +104,6 @@ function submitTasktoFirestore(){
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  database.collection("tareas").doc("Tarea 1").delete().then(() => {
-    console.log("Document successfully deleted!");
-  }).catch((error) => {
-      console.error("Error removing document: ", error);
-  });
-
   reloadTaskView();
 });
 
@@ -94,3 +112,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
 boton.addEventListener("click", () => {
   submitTasktoFirestore();
 });
+
+botonDeleteTask.addEventListener("click", () => {
+  reloadDeleteTaskView();
+})
+
+botonSendDeleteTask.addEventListener("click", () => {
+  var names = [];
+  $('input[type=checkbox]:checked').each(function(_ , item) {
+      names.push(item.value);
+  });
+
+  if(names.length == 0) {
+    console.log(names.length)
+    alert("No ha seleccionado tareas")
+  }
+  
+  names.forEach((name) => {
+    database.collection("tareas").doc(name).delete().then(() => {
+      console.log("Document successfully deleted!");
+      $("#modalDelete").modal('close');
+      M.toast({html: 'Eliminado correctamente'})
+      reloadTaskView();
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
+  })
+ 
+})
