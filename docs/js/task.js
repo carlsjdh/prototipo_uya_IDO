@@ -5,7 +5,7 @@ const botonSendDeleteTask = document.querySelector("#buttonSendDeleteTask");
 
 const loadingCSS = 
   `<div class="preloader-wrapper small active">
-    <div class="spinner-layer spinner-blue-only">
+    <div class="spinner-layer spinner-green-only">
       <div class="circle-clipper left">
         <div class="circle"></div>
       </div><div class="gap-patch">
@@ -57,18 +57,14 @@ function reloadTaskView(){
         if(Difference_In_Days <= 0) {
           Difference_In_Days = "Finalizado"
         } else {
-          if(Difference_In_Days == 1) {
-            Difference_In_Days = "Queda " + Difference_In_Days + " día"
-          } else {
-            Difference_In_Days = "Quedan " + Difference_In_Days + " días"
-          }
+          Difference_In_Days = "Quedan " + Difference_In_Days + " días"
         }
 
         var taskName = doc.data().nombre;
         content += `<li>
-                      <div class="collapsible-header" aria-label="${taskName}">
+                      <div class="collapsible-header">
                         <i class="material-icons">forum</i>
-                        <span id="task_${taskName}" tabindex="0">${taskName} - ${Difference_In_Days}</span>
+                        <span id="task_${taskName}" onkeyup="enterClick(event, 'task_${taskName}')" tabindex="0">${taskName} - ${Difference_In_Days}</span>
                       </div>`;
         content += `  <div class="collapsible-body">  
                         <div class="section">
@@ -80,13 +76,15 @@ function reloadTaskView(){
                       </div>
                     </li>`;
       })
-      taskView.innerHTML = content;  
+      taskView.innerHTML = content;   
     }
 
   })
 };
 
-
+function enterClick(event, id) {
+  if (event.code === 'Space' || event.code === 'Enter') document.getElementById(id).click();
+}
 
 function submitTasktoFirestore(){
   
@@ -154,3 +152,5 @@ botonSendDeleteTask.addEventListener("click", () => {
   })
   reloadTaskView();
 })
+
+window.enterClick = enterClick;
