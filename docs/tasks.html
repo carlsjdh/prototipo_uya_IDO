@@ -69,7 +69,8 @@
       </li>
       <li>
         <button tabindex="0" type="button" class="btn-floating black tooltipped modal-trigger" data-position="left"
-          data-tooltip="Eliminar tarea" aria-label="Eliminar tarea" id="buttonDeleteTask" role="button" href="#modalDelete"><i class="material-icons">clear</i>
+          data-tooltip="Eliminar tarea" aria-label="Eliminar tarea" id="buttonDeleteTask" role="button"
+          href="#modalDelete"><i class="material-icons">clear</i>
         </button>
       </li>
     </ul>
@@ -84,28 +85,31 @@
           <span lang="en">i do</span>
         </div>
 
-        <a href="index.html" class="brand-logo hide-on-large-only" aria-labelledby="logoLabel">
-          <img class="responsive-img" width="80px" src="img/logo.svg">
+        <a href="index.html" class="brand-logo hide-on-large-only">
+          <img class="responsive-img" width="80px" aria-labelledby="logoLabel" src="img/logo.svg">
         </a>
         <a href="#" data-target="idoNav" class="sidenav-trigger" aria-expanded="false"
           aria-label="Accionar menú lateral">
           <i class="material-icons">menu</i>
         </a>
 
-        <ul class="left hide-on-med-and-down" role="navigation">
-          <li>
-            <a href="index.html" class="brand-logo logo-margin hide-on-small-only hide-on-med-only"
-              aria-labelledby="logoLabel">
-              <img class="responsive-img" width="80px" src="img/logo.svg" alt=""
-                style="margin-top: 10px; margin-left: 10px;">
-            </a>
-          </li>
-        </ul>
+        <div role="navigation">
+          <ul class="left hide-on-med-and-down">
+            <li>
+              <a href="index.html" class="brand-logo logo-margin hide-on-small-only hide-on-med-only">
+                <img class="responsive-img" width="80px" src="img/logo.svg" aria-labelledby="logoLabel"
+                  style="margin-top: 10px; margin-left: 10px;">
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        <ul class="right hide-on-med-and-down" role="navigation">
-          <li><a href="profile.html">Perfil</a></li>
-          <li><a href="tasks.html">Mis tareas</a></li>
-        </ul>
+        <div role="navigation">
+          <ul class="right hide-on-med-and-down">
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="tasks.html">Mis tareas</a></li>
+          </ul>
+        </div>
 
       </div>
     </nav>
@@ -113,7 +117,7 @@
 
   <!-- Responsive menu - Hidden in desktop -->
   <ul class="sidenav hide-on-large-only" id="idoNav" aria-label="Menú de navegación lateral">
-    <li><a href="">Menú de navegación:</a></li>
+    <li><a>Menú de navegación:</a></li>
     <li><a href="profile.html" aria-label="Ir al perfil"><i class="material-icons prefix">person</i>Perfil</a></li>
     <li><a href="tasks.html" aria-label="Ir a mis tareas"><i class="material-icons prefix">mode_edit</i>Mis tareas</a>
     </li>
@@ -137,7 +141,8 @@
     <div class="nav-wrapper light-blue darken-3">
       <div class="col s12 container">
         <a href="index.html" class="breadcrumb" aria-label="Inicio"><span class="white-text">Home</span></a>
-        <a href="tasks.html" class="breadcrumb" aria-current="location"><span class="white-text"><strong>Mis tareas</strong></span></a>
+        <a href="tasks.html" class="breadcrumb" aria-current="location"><span class="white-text"><strong>Mis
+              tareas</strong></span></a>
       </div>
     </div>
   </nav>
@@ -207,8 +212,10 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 tabindex="0" class="white-text">Contacta con nosotros</h5>
-          <p tabindex="0" aria-label="teléfono. 922 123 456" class="grey-text text-lighten-4"><i tabindex="-1" class="material-icons prefix">local_phone</i>922 123 456</p>
-          <p tabindex="0" aria-label="correo electrónico. bebeagua@ido.com" class="grey-text text-lighten-4"><i tabindex="-1" class="material-icons prefix">email</i> bebeagua@ido.com</p>
+          <p tabindex="0" aria-label="teléfono. 922 123 456" class="grey-text text-lighten-4"><i tabindex="-1"
+              class="material-icons prefix">local_phone</i>922 123 456</p>
+          <p tabindex="0" aria-label="correo electrónico. bebeagua@ido.com" class="grey-text text-lighten-4"><i
+              tabindex="-1" class="material-icons prefix">email</i> bebeagua@ido.com</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links de interes</h5>
