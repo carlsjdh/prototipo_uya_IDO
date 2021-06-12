@@ -21,53 +21,59 @@
 </head>
 
 <body>
-    <!-- Navbar webpage -->    
-    <div class="navbar-fixed hoverable ">
-      <nav >
-        <div class="nav-wrapper light-blue darken-4" >
+  <!-- Navbar webpage -->    
+  <div class="navbar-fixed hoverable ">
+    <nav >
+      <div class="nav-wrapper light-blue darken-4" >
 
-          <a href="index.html" class="brand-logo hide-on-large-only" aria-label="IDO">
-            <img class="responsive-img" width="80px" src="img/logo.svg" alt="">
+        <a href="index.html" class="brand-logo hide-on-large-only" aria-label="Traday">
+          <img class="responsive-img" width="80px" src="img/logo.svg" alt="">
+        </a>
+
+          <a href="#" data-target="idoNav"
+                      class="sidenav-trigger"
+                      aria-expanded="false"
+                      aria-label= "Accionar menú lateral">
+            <i class="material-icons">menu</i>          
           </a>
-
-            <a href="#" data-target="idoNav"
-                        class="sidenav-trigger"
-                        aria-expanded="false"
-                        aria-label= "Accionar menú lateral">
-              <i class="material-icons">menu</i>          
-            </a>
-          
-            <ul class="left hide-on-med-and-down" role="navigation">
-              <li>
-                <a href="index.html" class="brand-logo logo-margin hide-on-small-only hide-on-med-only" aria-label="IDO">
-                  <img class="responsive-img" width="80px" src="img/logo.svg" alt="" style="margin-top: 10px; margin-left: 10px;">
-                </a>
-              </li>
-            </ul>
-          
-            <ul class="right hide-on-med-and-down" role="navigation">
-              <li><a href="profile.html">Perfil</a></li>
-              <li><a href="tasks.html">Mis tareas</a></li>
-            </ul>
-          
-        </div>
-      </nav>
-    </div>
         
-    <!-- Responsive menu - Hidden in desktop -->    
-    <ul 
-      class="sidenav" id="idoNav"
-      aria-label="Menú de navegación lateral">
-      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil"> Perfil</a></li>
-      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Mis tareas</a></li>
-      <br>
-      <br>
-      <br>
-      <li class="center">
-        <img class="responsive-img " width="100px" src="img/logo.svg" alt="IDO">
-      </li>
-      <li><a tabindex="-1" href="#!" class="sidenav-close btn light-blue darken-4"" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
-    </ul>
+          <ul class="left hide-on-med-and-down" role="navigation">
+            <li>
+              <a href="index.html" class="brand-logo logo-margin hide-on-small-only hide-on-med-only" aria-label="IDO">
+                <img class="responsive-img" width="80px" src="img/logo.svg" alt="" style="margin-top: 10px; margin-left: 10px;">
+              </a>
+            </li>
+          </ul>
+        
+          <ul class="right hide-on-med-and-down" role="navigation">
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="tasks.html">Mis tareas</a></li>
+          </ul>
+        
+      </div>
+    </nav>
+  </div>
+       
+<!-- Responsive menu - Hidden in desktop -->    
+  <ul 
+    class="sidenav" id="idoNav"
+    aria-label="Menú de navegación lateral">
+    <li><a>Menú de navegación:</a></li>
+    <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil"><i class="material-icons prefix">person</i>Perfil</a></li>
+    <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas"><i class="material-icons prefix">mode_edit</i>Mis tareas</a></li>
+    <br>
+    <br>
+    <br>
+    <li class="center">
+      <img href="index.html" class="responsive-img " width="100px" src="img/logo.svg" alt="IDO">
+    </li>
+    <li class="center">
+      <a href="index.html">Volver a home</a>
+    </li>
+    <br>
+    <li><a tabindex="-1" href="#!" class="sidenav-close btn light-blue darken-4"" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+  </ul>
+
 
     <!--Breadscrumbs-->
     <nav aria-label="breadcrumbs">
