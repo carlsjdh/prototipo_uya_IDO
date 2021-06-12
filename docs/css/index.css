@@ -5,3 +5,7 @@ body {
 .responsive-img {
   margin-top: 5%; 
 }
+
+.bookmark-icon {
+  width: 30px;
+}

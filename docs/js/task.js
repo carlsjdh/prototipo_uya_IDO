@@ -63,7 +63,7 @@ function reloadTaskView(){
         var taskName = doc.data().nombre;
         content += `<li>
                       <div class="collapsible-header">
-                        <i class="material-icons">forum</i>
+                        <i tabindex="-1" class="material-icons">forum</i>
                         <span id="task_${taskName}" onkeyup="enterClick(event, 'task_${taskName}')" tabindex="0">${taskName} - ${Difference_In_Days}</span>
                       </div>`;
         content += `  <div class="collapsible-body">  
@@ -127,6 +127,8 @@ botonDeleteTask.addEventListener("click", () => {
   reloadDeleteTaskView();
 })
 
+
+
 botonSendDeleteTask.addEventListener("click", () => {
   var names = [];
   $('input[type=checkbox]:checked').each(function(_ , item) {
@@ -134,7 +136,6 @@ botonSendDeleteTask.addEventListener("click", () => {
   });
 
   if(names.length == 0) {
-    console.log(names.length)
     alert("No ha seleccionado tareas")
   }
   
