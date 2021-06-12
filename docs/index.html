@@ -1,5 +1,7 @@
 <html>
   <head>
+    <!--CSS index.css-->
+    <link rel="stylesheet" href="css/index.css">
     <!--Responsive web-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Icon Font-->
@@ -20,6 +22,10 @@
       <nav >
         <div class="nav-wrapper light-blue darken-4" >
 
+          <a href="index.html" class="brand-logo hide-on-large-only" aria-label="Traday">
+            <img class="responsive-img" width="80px" src="img/logo.svg" alt="">
+          </a>
+
             <a href="#" data-target="idoNav"
                         class="sidenav-trigger"
                         aria-expanded="false"
@@ -27,9 +33,17 @@
               <i class="material-icons">menu</i>          
             </a>
           
+            <ul class="left hide-on-med-and-down" role="navigation">
+              <li>
+                <a href="index.html" class="brand-logo logo-margin hide-on-small-only hide-on-med-only" aria-label="IDO">
+                  <img class="responsive-img" width="80px" src="img/logo.svg" alt="" style="margin-top: 10px; margin-left: 10px;">
+                </a>
+              </li>
+            </ul>
+          
             <ul class="right hide-on-med-and-down" role="navigation">
               <li><a href="profile.html">Perfil</a></li>
-              <li><a href="tasks.html">Tareas</a></li>
+              <li><a href="tasks.html">Mis tareas</a></li>
             </ul>
           
         </div>
@@ -40,12 +54,15 @@
     <ul 
       class="sidenav" id="idoNav"
       aria-label="Menú de navegación lateral">
-      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
-      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
+      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil"> Perfil</a></li>
+      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Mis tareas</a></li>
       <br>
       <br>
       <br>
-      <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+      <li class="center">
+        <img class="responsive-img " width="100px" src="img/logo.svg" alt="IDO">
+      </li>
+      <li><a tabindex="-1" href="#!" class="sidenav-close btn light-blue darken-4"" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
     </ul>
 
     <!--Parallax-->
@@ -53,15 +70,20 @@
       <div class="parallax"><img src="img/a.jpg"></div>
       <div class="section white">
         <div class="row container">
-          <h2 class="header">I-DO</h2>
-          <p class="grey-text text-darken-3 lighten-3">I-DO es una aplicación web que permite gestionar tu tiempo de estudio.</p>
+          <h2 class="header center-align">¡Bienvenido a I-DO!</h2>
+          <p class="grey-text text-darken-3 lighten-3 center-align">I-DO es una aplicación web que permite gestionar tu tiempo de estudio.</p>
         </div>
       </div>
     </div>
     <div class="section white">
       <div class="row container">
         <h2 class="header">¿Qué puedes hacer?</h2>
-        <p class="grey-text text-darken-3 lighten-3">I-DO es una aplicación web que permite gestionar y optimizar tu tiempo de estudio.</p>
+        <p class="grey-text text-darken-3 lighten-3">
+          <li>Introducir tus tareas pendientes</li>
+          <li>Gestionar el tiempo necesario para realizar dichas tareas</li>
+          <li>Agregar una pequeña descripción</li>
+          <p class="center-align">¡Y todo esto sin descargar absolutamente nada y de manera gratuita!</p>
+        </p>
       </div>
     </div>
     <div class="parallax-container">
@@ -71,28 +93,28 @@
   </body>
 
 <!--Footer-->
-  <footer class="page-footer teal lighten-1">
+  <footer class="page-footer light-blue darken-4">
     <div class="container ">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <h5 class="white-text">Contacta con nosotros</h5>
+          <p class="grey-text text-lighten-4"><i class="material-icons prefix">local_phone</i> 922 123 456</p>
+          <p class="grey-text text-lighten-4"><i class="material-icons prefix">email</i> bebeagua@ido.com</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="white-text">Links de interes</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Política de privacidad</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Aviso legal</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Publicidad</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Política de Cookies</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright teal lighten-2">
+    <div class="footer-copyright light-blue darken-3">
       <div class="container">
-      © 2021 Copyright
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      © 2021 Copyright - IDO S.A
       </div>
     </div>
   </footer>

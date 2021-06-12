@@ -51,12 +51,12 @@
     </div>
     <!--Button fixed-->
     <div class="fixed-action-btn click-to-toggle" id="bottonOptions">
-      <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large teal darken-2 ">
+      <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large light-blue darken-2 ">
         <i class="large material-icons">menu</i>
       </button>
       <ul>
         <li>
-          <button tabindex="0" class="btn-floating teal tooltipped modal-trigger" 
+          <button tabindex="0" class="btn-floating blue tooltipped modal-trigger" 
               data-position="left" 
               data-tooltip="Añadir tarea"
               aria-label="Añadir tarea"
@@ -81,7 +81,11 @@
     <!-- Navbar webpage -->    
     <div class="navbar-fixed hoverable ">
       <nav >
-        <div class="nav-wrapper teal lighten-1" >
+        <div class="nav-wrapper light-blue darken-4" >
+
+          <a href="index.html" class="brand-logo hide-on-large-only" aria-label="Traday">
+            <img class="responsive-img" width="80px" src="img/logo.svg" alt="">
+          </a>
 
             <a href="#" data-target="idoNav"
                         class="sidenav-trigger"
@@ -90,30 +94,41 @@
               <i class="material-icons">menu</i>          
             </a>
           
+            <ul class="left hide-on-med-and-down" role="navigation">
+              <li>
+                <a href="index.html" class="brand-logo logo-margin hide-on-small-only hide-on-med-only" aria-label="IDO">
+                  <img class="responsive-img" width="80px" src="img/logo.svg" alt="" style="margin-top: 10px; margin-left: 10px;">
+                </a>
+              </li>
+            </ul>
+          
             <ul class="right hide-on-med-and-down" role="navigation">
               <li><a href="profile.html">Perfil</a></li>
-              <li><a href="tasks.html">Tareas</a></li>
+              <li><a href="tasks.html">Mis tareas</a></li>
             </ul>
           
         </div>
       </nav>
     </div>
-     
+        
     <!-- Responsive menu - Hidden in desktop -->    
-    <ul
+    <ul 
       class="sidenav" id="idoNav"
       aria-label="Menú de navegación lateral">
-      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil">Perfil</a></li>
-      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Tareas</a></li>
+      <li ><a tabindex="-1" href="profile.html" aria-label="Ir al perfil"> Perfil</a></li>
+      <li ><a tabindex="-1" href="tasks.html" aria-label="Ir a mis tareas">Mis tareas</a></li>
       <br>
       <br>
       <br>
-      <li ><a tabindex="-1" href="#!" class="sidenav-close btn" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
+      <li class="center">
+        <img class="responsive-img " width="100px" src="img/logo.svg" alt="IDO">
+      </li>
+      <li><a tabindex="-1" href="#!" class="sidenav-close btn light-blue darken-4"" aria-label="Cerrar menú lateral"> <i class="material-icons white-text">arrow_back</i> Cerrar</a></li>
     </ul>
 
     <!--Breadscrumbs-->
     <nav aria-label="breadcrumbs">
-      <div class="nav-wrapper teal darken-2">
+      <div class="nav-wrapper light-blue darken-3">
         <div class="col s12 container">
           <a href="index.html" class="breadcrumb"  aria-label="Inicio">Home</a>
           <a href="tasks.html" class="breadcrumb" aria-current="location">Mis tareas</a>
@@ -178,6 +193,4 @@
         <button class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
       </div>
     </div>
-
-
   </body>
