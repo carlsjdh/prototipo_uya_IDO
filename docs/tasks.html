@@ -174,10 +174,10 @@
       <p>Información de la tarea</p>
       <!--Form task-->
       <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">class</i>
+        <div tabindex="-1" class="input-field col s12">
+          <i tabindex="-1" class="material-icons prefix">class</i>
           <input id="taskName" type="text" class="validate">
-          <label class="active" for="taskName">Nombre de la tarea</label>
+          <label class="active" for="taskName">Nombre de la tarea (campo requerido)</label>
         </div>
       </div>
 
@@ -185,15 +185,15 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">mode_edit</i>
           <textarea id="descriptionTask" class="materialize-textarea"></textarea>
-          <label for="descriptionTask">Descripción</label>
+          <label for="descriptionTask">Descripción (campo requerido)</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">time</i>
-          <input id="dateTask" type="date" class="validate">
-          <label class="active" for="dateTask">Fecha</label>
+          <input id="dateTask" type="date" class="validate" aria-required="true">
+          <label class="active" for="dateTask">Fecha (campo requerido)</label>
         </div>
       </div>
       <button class="waves-effect waves-light btn blue" id="buttonSendtask">Enviar</button>
