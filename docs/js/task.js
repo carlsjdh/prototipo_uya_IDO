@@ -106,13 +106,13 @@ function submitTasktoFirestore(){
     })
     .then((docRef) => {
       $("#modalAdd").modal('close');
-      M.toast({html: 'Tarea añadida correctamente!'})
+      M.toast({html: '<span role="alert">Tarea añadida correctamente!</span>'})
       
       reloadTaskView();
     })
     .catch( (docRef) => {
-      M.toast({html: 'Error añadiendo la tarea'})
-        console.log("Error añadiendo contacto: ", docRef);
+      M.toast({html: '<span role="alert">Error añadiendo la tarea</span>'})
+      // console.log("Error añadiendo contacto: ", docRef);
     })
   }
 }
@@ -141,7 +141,8 @@ botonSendDeleteTask.addEventListener("click", () => {
   });
 
   if(names.length == 0) {
-    alert("No ha seleccionado tareas")
+    // alert("No ha seleccionado tareas")
+    M.toast({html: '<span role="alert">No ha seleccionado tareas</span>'});
   }
   
   names.forEach((name) => {
@@ -149,10 +150,10 @@ botonSendDeleteTask.addEventListener("click", () => {
     database.collection("tareas").doc(name).delete().then(() => {
       console.log("Document successfully deleted!");
       $("#modalDelete").modal('close');
-      M.toast({html: `Eliminado correctamente ${name}`})
+      M.toast({html: `<span role="alert">Eliminado correctamente ${name}</span>`});
     }).catch((error) => {
         Problems = true;
-        console.error("Error removing document: ", error);
+        // console.error("Error removing document: ", error);
     });
 
   })
