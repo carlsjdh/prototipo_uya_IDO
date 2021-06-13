@@ -57,7 +57,15 @@ function reloadTaskView(){
         if(Difference_In_Days <= 0) {
           Difference_In_Days = "Finalizado"
         } else {
-          Difference_In_Days = "Quedan " + Difference_In_Days + " días"
+          if(Difference_In_Days <= 0) {
+            Difference_In_Days = "Finalizado"
+          } else {
+            if(Difference_In_Days == 1) {
+              Difference_In_Days = "Queda " + Difference_In_Days + " día"
+            } else {
+              Difference_In_Days = "Quedan " + Difference_In_Days + " días"
+            }
+          }
         }
 
         var taskName = doc.data().nombre;
