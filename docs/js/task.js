@@ -92,9 +92,9 @@ function submitTasktoFirestore(){
   const description = document.querySelector("#descriptionTask").value;
   const date = document.querySelector("#dateTask").value;
 
-  if (name == '') M.toast({html: '<span role="alert">El campo \'Nombre de la tarea\' está vacío</span>'});
-  if (description == '') M.toast({html: '<span role="alert">El campo \'Descripción\' está vacío</span>'});
-  if (date == '') M.toast({html: '<span role="alert">El campo \'Fecha\' está vacío</span>'});
+  if (name == '') M.toast({html: '<span role="alert">El campo \'Nombre de la tarea\' está vacío. Indique un nombre para la tarea.</span>'});
+  if (description == '') M.toast({html: '<span role="alert">El campo \'Descripción\' está vacío. Provea una descripción para la tarea.</span>'});
+  if (date == '') M.toast({html: '<span role="alert">El campo \'Fecha\' está vacío. Indique una fecha para la tarea.</span>'});
   
   if (name == '' || description == '' || date == '') {
     return;
@@ -111,7 +111,7 @@ function submitTasktoFirestore(){
       reloadTaskView();
     })
     .catch( (docRef) => {
-      M.toast({html: '<span role="alert">Error añadiendo la tarea</span>'})
+      M.toast({html: '<span role="alert">Error añadiendo la tarea. Inténtelo nuevamente.</span>'})
       // console.log("Error añadiendo contacto: ", docRef);
     })
   }
