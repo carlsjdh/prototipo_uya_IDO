@@ -91,8 +91,13 @@ function submitTasktoFirestore(){
   const name = document.querySelector("#taskName").value;
   const description = document.querySelector("#descriptionTask").value;
   const date = document.querySelector("#dateTask").value;
-  if ( name == '' || description == '' || date == ''){
-    alert("Hay campos vacíos")
+
+  if (name == '') M.toast({html: '<span role="alert">El campo \'Nombre de la tarea\' está vacío</span>'});
+  if (description == '') M.toast({html: '<span role="alert">El campo \'Descripción\' está vacío</span>'});
+  if (date == '') M.toast({html: '<span role="alert">El campo \'Fecha\' está vacío</span>'});
+  
+  if (name == '' || description == '' || date == '') {
+    return;
   } else {
     database.collection("tareas").doc(`${name}`).set({
       nombre: name,
