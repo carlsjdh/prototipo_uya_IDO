@@ -13,3 +13,9 @@
   width: 100%;
   height: 20%;            /* Footer height */
 }
+
+
+.focus:focus-visible {
+
+  outline: 4px dashed darkorange;
+}

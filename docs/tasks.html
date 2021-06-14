@@ -13,36 +13,6 @@
   <link href="css/task.css" rel="stylesheet">
   <!-- Materialize CSS file -->
   <link rel="stylesheet" href="css/materialize.min.css" media="screen, projection" />
-  <!-- Materialize JS file -->
-  <script defer type="text/javascript" src="js/materialize.min.js"></script>
-  <!--Index.js-->
-  <script defer type="text/javascript" src="js/index.js"></script>
-  <!--Task.js-->
-  <script defer type="text/javascript" src="js/task.js"></script>
-  <!--JQuery-->
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-  <!--Firestore BBDD-->
-  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
-  <!--Firebase-->
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyBw1-M9e2Fy8xRizH0XxQ_XxRFX_Aphmp0",
-      authDomain: "prototipo-uya-ido.firebaseapp.com",
-      databaseURL: "https://prototipo-uya-ido-default-rtdb.firebaseio.com",
-      projectId: "prototipo-uya-ido",
-      storageBucket: "prototipo-uya-ido.appspot.com",
-      messagingSenderId: "1056566832965",
-      appId: "1:1056566832965:web:9e55a0e5cb2ebff0df182c",
-      measurementId: "G-PM470T2H2D"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.firestore();
-  </script>
   <title>I-Do - Mis Tareas</title>
 </head>
 
@@ -52,7 +22,7 @@
     <div id="content-wrap">
       <!--Button fixed-->
       <div class="fixed-action-btn click-to-toggle" id="bottonOptions">
-        <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large green darken-2 ">
+        <button tabindex="0" aria-label="Opciones del usuario" class="btn-floating btn-large green darken-2 focus">
           <i class="large material-icons">menu</i>
         </button>
         <ul>
@@ -234,6 +204,37 @@
       </div>
     </footer>
   </div>
+
+    <!-- Materialize JS file -->
+    <script defer type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Index.js-->
+    <script defer type="text/javascript" src="js/index.js"></script>
+    <!--Task.js-->
+    <script defer type="text/javascript" src="js/task.js"></script>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <!--Firestore BBDD-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <!--Firebase-->
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBw1-M9e2Fy8xRizH0XxQ_XxRFX_Aphmp0",
+        authDomain: "prototipo-uya-ido.firebaseapp.com",
+        databaseURL: "https://prototipo-uya-ido-default-rtdb.firebaseio.com",
+        projectId: "prototipo-uya-ido",
+        storageBucket: "prototipo-uya-ido.appspot.com",
+        messagingSenderId: "1056566832965",
+        appId: "1:1056566832965:web:9e55a0e5cb2ebff0df182c",
+        measurementId: "G-PM470T2H2D"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.firestore();
+    </script> 
 </body>
 
 </html>
