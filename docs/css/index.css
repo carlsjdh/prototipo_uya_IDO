@@ -9,3 +9,7 @@ body {
 .bookmark-icon {
   width: 30px;
 }
+
+.focus:focus-visible {
+  outline: 4px dashed darkorange;
+}
