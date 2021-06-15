@@ -154,13 +154,13 @@ botonSendDeleteTask.addEventListener("click", () => {
       console.log("Document successfully deleted!");
       $("#modalDelete").modal('close');
       M.toast({ html: `<span role="alert">Eliminado correctamente ${name}</span>` });
+      reloadTaskView();
     }).catch((error) => {
       Problems = true;
       // console.error("Error removing document: ", error);
     });
 
   })
-  reloadTaskView();
 })
 
 window.enterClick = enterClick;
